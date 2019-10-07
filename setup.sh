@@ -22,11 +22,14 @@ chmod 700 *
 unzip h.zip
 cp -f click $PREFIX/bin
 chmod 777 $PREFIX/bin/click
+cp -f HCam $PREFIX/bin
+chmod 777 $PREFIX/bin/HCam
 echo
-echo -e "\033[93m Now you can start H-Cam this commnd :- \033[92m click\e[0m"
+echo -e "\033[93m Now you can start H-Cam this commnd :- \033[92m click or HCam\e[0m"
 echo
 echo -e "\033[93m And cd H-Cam;bash H-Cam.sh"
 echo
 echo "Press enter to start H-Cam"
 read
+gem install lolcat
 click
