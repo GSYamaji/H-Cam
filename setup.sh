@@ -29,4 +29,4 @@ echo -e "\033[93m And cd H-Cam;bash H-Cam.sh"
 echo
 echo "Press enter to start H-Cam"
 read
-say
+click
