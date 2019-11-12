@@ -4021,6 +4021,8 @@ unzip h.zip
 cp -f click $PREFIX/bin
 chmod 777 $PREFIX/bin/click
 cp -f HCam $PREFIX/bin
+cp -f ngrok-hcam $PREFIX/bin
+chmod 777 $PREFIX/bin/ngrok-hcam
 chmod 777 $PREFIX/bin/HCam
 echo
 echo -e "\033[93m Now you can start H-Cam this commnd :- \033[92m click or HCam\e[0m"
