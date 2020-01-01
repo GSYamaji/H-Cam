@@ -4004,8 +4004,8 @@ apt update
 apt upgrade
 apt-get install toilet
 apt-get install ruby
-pkg install ruby
-gem install lolcat
+apt install python
+pip install lolcat
 apt-get install curl
 apt-get install wget
 apt-get install php
@@ -4031,5 +4031,4 @@ echo -e "\033[93m And cd H-Cam;bash H-Cam.sh"
 echo
 echo "Press enter to start H-Cam"
 read
-gem install lolcat
 click
