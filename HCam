@@ -1,3 +1,0 @@
-#!/data/data/com.termux/files/usr/bin/sh
-cd $HOME/H-Cam
-bash H-Cam.sh
