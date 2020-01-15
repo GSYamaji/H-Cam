@@ -1,6 +1,9 @@
 
 # Installation
 <pre original link :http://github.com/thelinuxchoice/saycheese</pre>
+<img src="https://github.com/rooted-cyber/image-upload/raw/master/H-Cam1.png" style="width:300px;height:400px;">
+
+
 <img src="https://github.com/rooted-cyber/image-upload/raw/master/H-Cam.png" style="width:300px;height:400px;">
 
 <pre>
