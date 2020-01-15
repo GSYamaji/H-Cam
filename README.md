@@ -7,7 +7,7 @@
  $ apt update
  $ apt upgrade
  $ apt install git
- $ git clone http://github.com/rooted-cyber/H-Cam</pre>
+ $ git clone http://github.com/rooted-cyber/H-Cam
  $ cd H-Cam
  $ bash H-Cam.sh </pre>
 
