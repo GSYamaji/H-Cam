@@ -13,13 +13,16 @@ setup () {
 	apt install toilet
 	apt install python
 	pip install lolcat
+	checking-packages
 	ma
+	checking-files
 	check-ngrok
 	cd ~/H-Cam
 	echo "#!/data/data/com.termux/files/usr/bin/sh" >> $PREFIX/bin/click
 	echo "cd ~/H-Cam" >> $PREFIX/bin/click
 	echo "bash H-Cam.sh" >> $PREFIX/bin/click
 	chmod 700 $PREFIX/bin/click
+	checking-shortcut
 	clear
 	printf "\n\n \033[93m [√] You can start this command :- \033[96m click\n\n"
 	printf "Press enter to start H-Cam\n"
@@ -67,7 +70,46 @@ setup () {
 		setup
 		fi
 		clear
-banner() {
+		
+		checking-packages () {
+			
+			cd $PREFIX/bin
+			if [ -e lolcat ] || [ -e python ] || [ -e toilet ] || [ -e wget ] || [ -e php ];then
+			printf "\n Installed successfully"|lolcat --animate
+			else
+			printf "\n\033[91m Package is not installed\n\n Try again !!!\n"
+			read
+			setup
+			fi
+			}
+			checking-files () {
+				cd ~/H-Cam
+				if [ -e H-Cam.html ];then
+				printf "\n\033[92m unzip successfully\n"
+				else
+				ma
+				fi
+				}
+				checking-shortcut () {
+					cd $PREFIX/bin
+					if [ -e click ];then
+					printf "\n \033[92m Successfully created shortcut\n"
+					else
+					printf "\n\033[91m Not created , \n Try again !!\n"
+					read
+					shortcut
+					fi
+					}
+					shortcut () {
+						cd ~/H-Cam
+						echo "#!/data/data/com.termux/files/usr/bin/sh" >> $PREFIX/bin/click
+						echo "cd ~/H-Cam" >> $PREFIX/bin/click
+						echo "bash H-Cam.sh" >> $PREFIX/bin/click
+						chmod 700 $PREFIX/bin/click
+						}
+		
+		
+		banner() {
 c="toilet -f term -F gay"
 toilet -f mono12 -F metal H-Cam
 
