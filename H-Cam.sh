@@ -67,7 +67,8 @@ setup () {
 		if [ -e click ];then
 		echo
 		else
-		setup
+		cd ~/H-Cam
+		bash .setup.sh
 		fi
 		clear
 		
@@ -113,7 +114,7 @@ setup () {
 c="toilet -f term -F gay"
 toilet -f mono12 -F metal H-Cam
 
-printf " \e[1;96m v 2.0 Created by https://github.com/thelinuxchoice\e[0m \n"|lolcat --animate
+printf " \e[1;96m v 2.0 Created by https://github.com/thelinuxchoice\e[0m \n"|lolcat
 echo
 random
 printf "     		This Tool Edited By Maruf \n"
