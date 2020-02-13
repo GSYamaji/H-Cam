@@ -28,6 +28,7 @@ packages () {
 		echo
 		else
 		unzi
+		fi
 		}
 		unzi () {
 			cd ~/H-Cam
