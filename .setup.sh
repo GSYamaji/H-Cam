@@ -12,6 +12,7 @@ packages () {
 	pip install lolcat
 	apt install cowsay
 	checking-packages
+	sleep 4
 	#clear
 	#printf "\n\n[+] Downloading re.zip....\n"
 	#download-sites
@@ -49,6 +50,10 @@ packages () {
 			printf "\n[√] Ngrok Available\n"
 			else
 			clear
+			printf "\n\033[93m Checking ngrok in home..\n"
+			ng2
+			cd ~/H-Cam
+			sleep 2
 			printf "\n\n\033[91m [×] Ngrok not found !!!\n\n"
 			printf "\033[92m [+] Downloading ngrok....\n"
 			wget https://github.com/rooted-cyber/upload/raw/master/ngrok.zip
@@ -59,6 +64,19 @@ packages () {
 			rm -f ngrok.zip
 			fi
 			}
+			ng2 () {
+				cd ~
+				if [ -e ngrok ];then
+				sleep 1
+				printf "Ngrok available in home directory\n"
+				cp -f ngrok ~/H-Cam
+				shortcut
+				printf "\033[96m [√] Now you can use this command for start :- click\n\n"
+				exit
+				else
+				echo
+				fi
+				}
 			ngrok2 () {
 				cd ~/H-Cam
 				if [ -e ngrok ];then
