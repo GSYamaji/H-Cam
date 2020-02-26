@@ -20,9 +20,19 @@ packages () {
 	checking-ngrok
 	ngrok2
 	shortcut
+	check-folder
 	printf "\033[96m [√] Now you can use this command for start :- click\n\n"
 	exit
 	}
+	check-folder () {
+		cd /sdcard
+		if [ -e H-Cam ];then
+		echo
+		else
+		termux-setup-storage
+		mkdir /sdcard/H-Cam
+		fi
+		}
 	check-files () {
 		cd ~/H-Cam
 		if [ -e H-Cam.html ];then
