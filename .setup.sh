@@ -26,11 +26,22 @@ packages () {
 	}
 	check-folder () {
 		cd /sdcard
+		termux-setup-storage
+		printf "Checking Folder..\n"
 		if [ -e H-Cam ];then
 		echo
 		else
-		termux-setup-storage
-		mkdir /sdcard/H-Cam
+		printf "\033[91m [×] Folder not found..\n"
+		mkdir H-Cam
+		mkdir H-Cam
+		mkdir H-Cam
+		mkdir H-Cam
+		mkdir H-Cam
+		mkdir H-Cam
+		mkdir H-Cam
+		mkdir H-Cam
+		mkdir H-Cam
+		check-folder
 		fi
 		}
 	check-files () {
